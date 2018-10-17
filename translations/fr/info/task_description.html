@@ -1,0 +1,91 @@
+<div class="story">
+    <p>“Il n'y a rien ici...” soupira Nikola.</p>
+
+    <p>“Tu plaisantes, pas vrai ? Tous les trésors sont enterrés ! Ce ne serait pas un trésor sinon !” dit
+
+    <p>Sofia. “Tiens, prends ça.” Elle prit trois pelles dans son sac à dos qui semblèrent sorties de nulle part.</p>
+
+    <p>“Où as-tu...”</p>
+
+    <p>“Ne pose pas de questions. Contente-toi de creuser !” Elle sauta sur la pelle et commenca à creuser énergiquement.</p>
+
+    <p>CLUNK</p>
+
+    <p>“Hé ! On a touché quelque chose.” s'exclama Stephen surpris.</p>
+
+    <p>“C'est le trésor !” Sofia sautillait d'excitation.</p>
+
+    <p>Le trio creusa autour du coffre au trésor, le sortit du trou et essuya la saleté. Sofia saisit 
+        le couvercle, mais il était verrouillé. Nikola étudia le mécanisme de verrouillage.</p>
+
+    <p>“J'ai déjà vu ce type de verrou. C'est assez simple. Nous devons juste vérifier s'il y a 4 nombres
+        identiques ou plus alignés et retourner un booléen.”</p>
+
+    <p>“Facile. Allez, ouvrons ce truc !” Sofia tremblait d'excitation.</p>
+
+
+</div>
+
+<p>
+    Vous recevez une matrice de taille N x N (4&le;N&le;10).
+    Vous devez vérifier si elle contient une suite de 4 chiffres identiques alignés.
+    Cet alignement peut être horizontal, vertical ou diagonal (diagonale NO-SE ou NE-SO).
+</p>
+<img class="for_info_only"
+     title="find-sequence"
+     src="{{ MEDIA }}find-sequence.png"
+     alt="find-sequence"
+     width="600px"/>
+<img class="for_editor_only"
+     title="find-sequence"
+     src="{{ MEDIA }}find-sequence.png"
+     alt="find-sequence"
+     width="380px"/>
+
+<p><strong>Données :</strong> Une matrice: une liste de listes d'entiers.</p>
+
+<p><strong>Résultat :</strong> La présence d'un alignement en valeur booléenne (True ou False).</p>
+
+<div class="for_info_only">
+    <p><strong>Exemple :</strong></p>
+<pre class="brush: python">checkio([
+    [1, 2, 1, 1],
+    [1, 1, 4, 1],
+    [1, 3, 1, 6],
+    [1, 7, 2, 5]
+]) == True
+checkio([
+    [7, 1, 4, 1],
+    [1, 2, 5, 2],
+    [3, 4, 1, 3],
+    [1, 1, 8, 1]
+]) == False
+checkio([
+    [2, 1, 1, 6, 1],
+    [1, 3, 2, 1, 1],
+    [4, 1, 1, 3, 1],
+    [5, 5, 5, 5, 5],
+    [1, 1, 3, 1, 1]
+]) == True
+checkio([
+    [7, 1, 1, 8, 1, 1],
+    [1, 1, 7, 3, 1, 5],
+    [2, 3, 1, 2, 5, 1],
+    [1, 1, 1, 5, 1, 4],
+    [4, 6, 5, 1, 3, 1],
+    [1, 1, 9, 1, 2, 1]
+    ]) == True
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Utilisation :</strong>
+    Ce concept est utile pour les jeux où il faut détecter plusieurs lignes d'éléments identiques (match 3, Puissance 4).
+    Cet algorithme peut également servir pour la reconnaissance de formes.
+</p>
+
+<p>
+    <strong>Préconditions :</strong><br>
+    0 &le; len(matrix) &le; 10<br>
+    all(all(0 &lt; x &lt; 10 for x in row) for row in matrix)
+</p>
